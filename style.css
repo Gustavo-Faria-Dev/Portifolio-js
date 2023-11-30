@@ -69,11 +69,7 @@ ul {
     justify-content:center ;
     align-items: center;
 }
-
-@media screen and (max-width: 460px){
-    .logo-container{
-        height: 300px;
-    }
+@media screen and (max-width: 600px){
     .logo-name{
         width: 0%;
         display: none;
@@ -85,5 +81,14 @@ ul {
         padding-left: 0;
         justify-content: center;
     }
+   
+
+}
+
+@media screen and (max-width: 460px){
+    .logo-container{
+        height: 300px;
+    }
+    
     
 }
