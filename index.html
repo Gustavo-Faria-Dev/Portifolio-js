@@ -50,21 +50,46 @@
     <div class="about-container" id="about">
       <p style="font-size: 30px">About</p>
       <p>______________________</p>
+      <br />
+      <button id="button1">Button1</button>
     </div>
 
     <div class="contact-container" id="contact">
       <p style="font-size: 30px">Contact</p>
       <p>______________________</p>
       <br /><br />
-      <form>
+      <form id="myform">
         <label for="name">Name:</label><br />
         <input type="text" id="name" name="name" /><br />
         <br />
         <label for="lname">E-mail:</label><br />
         <input type="text" id="email" name="email" />
         <br /><br />
-        <input type="submit" value="Enviar" />
+        <input type="submit" value="Submit" />
       </form>
     </div>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      document.getElementById("myform").addEventListener("submit", function (event) {
+          event.preventDefault(); // Impede o envio padrão do formulário
+
+          // Captura os valores dos campos
+          var nome = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+
+          // Envia os dados para o data layer
+          window.dataLayer.push({
+            event: "formulario_submetido",
+            nome: nome,
+            email: email,
+          });
+
+          // Aqui você pode adicionar código adicional para processar o formulário, se necessário.
+
+          // Por fim, você pode permitir o envio padrão do formulário se desejar.
+          // this.submit();
+        });
+    </script>
   </body>
 </html>
