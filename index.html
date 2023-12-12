@@ -1,31 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      document
-        .getElementById("myform")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Impede o envio padrão do formulário
-
-          // Captura os valores dos campos
-          var nome = document.getElementById("name").value;
-          var email = document.getElementById("email").value;
-
-          // Envia os dados para o data layer
-          window.dataLayer.push({
-            event: "form_submit",
-            nome: nome,
-            email: email,
-          });
-
-          // Aqui você pode adicionar código adicional para processar o formulário, se necessário.
-
-          // Por fim, você pode permitir o envio padrão do formulário se desejar.
-          // this.submit();
-        });
-    </script>
+    
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -93,5 +69,30 @@
         <input type="submit" value="Submit" />
       </form>
     </div>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      document
+        .getElementById("myform")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Impede o envio padrão do formulário
+
+          // Captura os valores dos campos
+          var nome = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+
+          // Envia os dados para o data layer
+          window.dataLayer.push({
+            event: "form_submit",
+            nome: nome,
+            email: email,
+          });
+
+          // Aqui você pode adicionar código adicional para processar o formulário, se necessário.
+
+          // Por fim, você pode permitir o envio padrão do formulário se desejar.
+          // this.submit();
+        });
+    </script>
   </body>
 </html>
