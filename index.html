@@ -36,9 +36,8 @@
       <p class="logo-name">GU.CO</p>
       <div class="box"></div>
       <ul class="box-menu">
-        <li><a href="">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <!-- end menu -->
@@ -49,9 +48,23 @@
     <!-- end logo section -->
     <!-- about section -->
     <div class="about-container" id="about">
-      <p style="font-size: 30px;">About</p>
+      <p style="font-size: 30px">About</p>
       <p>______________________</p>
     </div>
 
+    <div class="contact-container" id="contact">
+      <p style="font-size: 30px">Contact</p>
+      <p>______________________</p>
+      <br /><br />
+      <form>
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" /><br />
+        <br />
+        <label for="lname">E-mail:</label><br />
+        <input type="text" id="email" name="email" />
+        <br /><br />
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
   </body>
 </html>
