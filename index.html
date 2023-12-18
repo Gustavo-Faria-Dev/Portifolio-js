@@ -51,7 +51,7 @@
       <p style="font-size: 30px">About</p>
       <p>______________________</p>
       <br />
-      <button id="button1">Button1</button>
+      <button id="button1" onclick="data_button">Button1</button>
     </div>
 
     <div class="contact-container" id="contact">
@@ -73,8 +73,8 @@
 
       document
         .getElementById("myform")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Impede o envio padrão do formulário
+        .addEventListener("click", function (event) {
+          //event.preventDefault(); // Impede o envio padrão do formulário
 
           // Captura os valores dos campos
           var nome = document.getElementById("name").value;
@@ -86,9 +86,7 @@
             nome: nome,
             email: email,
           });
-
           // Aqui você pode adicionar código adicional para processar o formulário, se necessário.
-
           // Por fim, você pode permitir o envio padrão do formulário se desejar.
           // this.submit();
         });
