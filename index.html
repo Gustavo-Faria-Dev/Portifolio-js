@@ -65,14 +65,14 @@
         <label for="lname">E-mail:</label><br />
         <input type="text" id="email" name="email" />
         <br /><br />
-        <input type="submit" value="Submit" />
+        <input type="submit" id="subform" value="Submit" />
       </form>
     </div>
     <script>
       window.dataLayer = window.dataLayer || [];
 
       document
-        .getElementById("myform")
+        .getElementById("subform")
         .addEventListener("click", function (event) {
           //event.preventDefault(); // Impede o envio padrão do formulário
 
